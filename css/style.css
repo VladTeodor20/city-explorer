@@ -1,0 +1,160 @@
+
+/* Stil general */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fa;
+    color: #333333;
+}
+
+/* Antetul site-ului */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #1f3b5d;
+    color: white;
+}
+
+.site-header h1 {
+    margin: 0;
+}
+
+/* Meniul de navigare */
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #ffcc00;
+}
+
+/* Continutul principal */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    color: #1f3b5d;
+    margin-bottom: 20px;
+}
+
+/* Destinatii - CSS Grid */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Aspectul cardurilor */
+.card {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #d0d7e2;
+    border-radius: 10px;
+}
+
+/* Efect la trecerea mouse-ului */
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Destinatia evidentiata */
+.card.featured {
+    border: 2px solid #5b3fd9;
+    background-color: #f0edff;
+}
+
+.card h3 {
+    color: #1f3b5d;
+    margin-top: 0;
+}
+
+/* Formularul de planificare */
+#planifica form {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #d0d7e2;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+#planifica label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#planifica input,
+#planifica select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #d0d7e2;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#planifica input:focus,
+#planifica select:focus {
+    outline: 2px solid #5b3fd9;
+}
+
+#planifica button {
+    background-color: #1f3b5d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#planifica button:hover {
+    background-color: #315b89;
+}
+
+/* Adaptare pentru telefon */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    #planifica form {
+        max-width: 100%;
+    }
+}
